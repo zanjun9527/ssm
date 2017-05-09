@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.UserInfoMapper" >
+  <resultMap id="BaseResultMap" type="pojo.UserInfo" >
+    <id column="ID" property="id" jdbcType="INTEGER" />
+    <result column="User_Code" property="userCode" jdbcType="VARCHAR" />
+    <result column="Email" property="email" jdbcType="VARCHAR" />
+    <result column="Cell_Phone" property="cellPhone" jdbcType="VARCHAR" />
+    <result column="User_Name" property="userName" jdbcType="VARCHAR" />
+    <result column="Age" property="age" jdbcType="INTEGER" />
+    <result column="Nick_Name" property="nickName" jdbcType="VARCHAR" />
+    <result column="Sex" property="sex" jdbcType="INTEGER" />
+    <result column="Password" property="password" jdbcType="VARCHAR" />
+    <result column="Password_Strength" property="passwordStrength" jdbcType="INTEGER" />
+    <result column="UserStatus" property="userstatus" jdbcType="INTEGER" />
+    <result column="Province_Id" property="provinceId" jdbcType="INTEGER" />
+    <result column="City_Id" property="cityId" jdbcType="INTEGER" />
+    <result column="District_Id" property="districtId" jdbcType="INTEGER" />
+    <result column="Address" property="address" jdbcType="VARCHAR" />
+    <result column="User_Picture_Att" property="userPictureAtt" jdbcType="VARCHAR" />
+    <result column="Individual_Type" property="individualType" jdbcType="INTEGER" />
+    <result column="Birthday" property="birthday" jdbcType="TIMESTAMP" />
+    <result column="Description" property="description" jdbcType="VARCHAR" />
+    <result column="Reg_Time" property="regTime" jdbcType="TIMESTAMP" />
+    <result column="Reg_IP" property="regIp" jdbcType="VARCHAR" />
+    <result column="Binding_QQ" property="bindingQq" jdbcType="VARCHAR" />
+    <result column="Binding_Sina" property="bindingSina" jdbcType="VARCHAR" />
+    <result column="Binding_Tencent" property="bindingTencent" jdbcType="VARCHAR" />
+    <result column="UserLevel" property="userlevel" jdbcType="INTEGER" />
+    <result column="Role_Id" property="roleId" jdbcType="INTEGER" />
+    <result column="In_Black_List" property="inBlackList" jdbcType="INTEGER" />
+    <result column="Login_Status" property="loginStatus" jdbcType="INTEGER" />
+    <result column="Date_Insert" property="dateInsert" jdbcType="TIMESTAMP" />
+    <result column="Date_Update" property="dateUpdate" jdbcType="TIMESTAMP" />
+    <result column="User_Insert" property="userInsert" jdbcType="INTEGER" />
+    <result column="User_Changed" property="userChanged" jdbcType="INTEGER" />
+    <result column="Email_CheckCode" property="emailCheckcode" jdbcType="VARCHAR" />
+    <result column="Delete_Mark" property="deleteMark" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    ID, User_Code, Email, Cell_Phone, User_Name, Age, Nick_Name, Sex, Password, Password_Strength, 
+    UserStatus, Province_Id, City_Id, District_Id, Address, User_Picture_Att, Individual_Type, 
+    Birthday, Description, Reg_Time, Reg_IP,  
+    Binding_QQ, Binding_Sina, Binding_Tencent, UserLevel, Role_Id, 
+    In_Black_List, Login_Status, Date_Insert, Date_Update, User_Insert, User_Changed, 
+    Email_CheckCode, Delete_Mark
+  </sql>
+  <select id="selectById" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from user_base_info
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  
+</mapper>
