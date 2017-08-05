@@ -20,7 +20,9 @@ import org.springframework.web.servlet.ModelAndView;
 
 import model.Account;
 
-//import weibo4j.Account;
+
+
+//import weibo4j.Accounts;
 @Controller
 public class PassportController {
 	private static 	Logger logger=Logger.getLogger(PassportController.class);
