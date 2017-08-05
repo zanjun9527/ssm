@@ -11,24 +11,21 @@ import javax.servlet.ServletResponse;
 
 public class myFilter implements Filter{
 
-	@Override
-	public void destroy() {
-		System.out.println("过滤结束");
-
+	public void init(FilterConfig filterConfig) throws ServletException {
+		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
-	public void doFilter(ServletRequest arg0, ServletResponse arg1, FilterChain arg2)
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		System.out.println("过滤进行");
-		arg2.doFilter(arg0, arg1);
-	}
-
-	@Override
-	public void init(FilterConfig arg0) throws ServletException {
-		System.out.println("过滤初始化开始了");
+		// TODO Auto-generated method stub
 		
 	}
 
+	public void destroy() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 }

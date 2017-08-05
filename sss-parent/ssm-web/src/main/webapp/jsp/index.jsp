@@ -4,11 +4,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">he
-<title>login</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">he${tips}
+<title>login${tips}</title>
 </head>
 <body>
-    <form:form action="login?path=hehe" method="post" modelAttribute="account">					 
+    <form:form action="login" method="post" modelAttribute="account">					 
     User name:<form:input path="userName"/>
     Password:<form:password path="password"/>
     age:<form:input path="age"/>
